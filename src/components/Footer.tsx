@@ -156,7 +156,7 @@ export default function Footer() {
               <span className="h-0.5 w-12 bg-accent mt-2"></span>
             </h3>
             <ul className="space-y-4 flex flex-col items-center md:items-start">
-              {navLinks.map((link, index) => (
+              {navLinks.map((link) => (
                 <li key={link.name} className="relative overflow-hidden">
                   <Link
                     href={link.href}

@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function ContactSection() {
   const currentYear = new Date().getFullYear();
@@ -97,17 +97,6 @@ export default function ContactSection() {
     }
   };
 
-  const pathVariants = {
-    hidden: { pathLength: 0 },
-    visible: {
-      pathLength: 1,
-      transition: {
-        duration: 1.5,
-        ease: "easeInOut"
-      }
-    }
-  };
-
   const linkHoverVariants = {
     rest: { width: 0 },
     hover: { width: "100%", transition: { duration: 0.3, ease: "easeInOut" } }
@@ -135,7 +124,7 @@ export default function ContactSection() {
             Let&apos;s Collaborate
           </h2>
           <p className="text-secondary mt-6 max-w-2xl mx-auto text-lg">
-            Got a project in mind? Let's create something exceptional together
+            Got a project in mind? Let&apos;s create something exceptional together
           </p>
           
           <motion.div 
@@ -229,8 +218,8 @@ export default function ContactSection() {
               <span className="h-0.5 w-12 bg-accent mt-2"></span>
             </h3>
             <ul className="space-y-4 flex flex-col items-center md:items-start">
-              {services.map((service, index) => (
-                <li key={index} className="relative overflow-hidden">
+              {services.map((service) => (
+                <li key={service} className="relative overflow-hidden">
                   <Link
                     href="#"
                     className="text-secondary hover:text-foreground transition-colors duration-300 block relative"

@@ -2,7 +2,7 @@
 
 import { useRef, useState } from "react";
 import { motion, useInView, AnimatePresence } from "framer-motion";
-import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaJava, FaDatabase } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaHtml5, FaCss3, FaDatabase } from "react-icons/fa";
 import { SiNextdotjs, SiThreedotjs, SiTypescript, SiFramer, SiTailwindcss } from "react-icons/si";
 import { DiJavascript } from "react-icons/di";
 import React from "react";

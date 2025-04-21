@@ -43,7 +43,10 @@ export default function ThreeBackground() {
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    containerRef.current.appendChild(renderer.domElement);
+    
+    // Capture containerRef.current to a local variable
+    const container = containerRef.current;
+    container.appendChild(renderer.domElement);
     
     // Determine colors based on theme
     const isDarkTheme = resolvedTheme === 'dark';
@@ -226,22 +229,30 @@ export default function ThreeBackground() {
       const elapsedTime = clock.getElapsedTime();
       
       // Update uniforms
-      particlesMaterial.uniforms.uTime.value = elapsedTime;
+      if (particlesMaterial && particlesMaterial.uniforms) {
+        particlesMaterial.uniforms.uTime.value = elapsedTime;
+      }
       
       // Smooth mouse movement
       mouse.x += (mouse.targetX - mouse.x) * mouse.speed;
       mouse.y += (mouse.targetY - mouse.y) * mouse.speed;
       
       // Apply to particle system
-      particles.rotation.y = elapsedTime * 0.05 + mouse.x * 0.5;
-      particles.rotation.x = mouse.y * 0.5;
+      if (particles) {
+        particles.rotation.y = elapsedTime * 0.05 + mouse.x * 0.5;
+        particles.rotation.x = mouse.y * 0.5;
+      }
       
-      smallParticles.rotation.y = -elapsedTime * 0.02;
-      smallParticles.rotation.x = -elapsedTime * 0.01;
+      if (smallParticles) {
+        smallParticles.rotation.y = -elapsedTime * 0.02;
+        smallParticles.rotation.x = -elapsedTime * 0.01;
+      }
       
       // Responsive particle size
       const size = Math.min(window.innerWidth, window.innerHeight) / 500;
-      particlesMaterial.uniforms.uSize.value = Math.max(size, 2);
+      if (particlesMaterial && particlesMaterial.uniforms) {
+        particlesMaterial.uniforms.uSize.value = Math.max(size, 2);
+      }
       
       renderer.render(scene, camera);
       requestAnimationFrame(animate);
@@ -249,13 +260,14 @@ export default function ThreeBackground() {
     
     animate();
     
-    // Cleanup
+    // Cleanup function
     return () => {
-      if (containerRef.current) {
-        containerRef.current.removeChild(renderer.domElement);
+      // Use the local container variable
+      if (container && container.contains(renderer.domElement)) {
+        container.removeChild(renderer.domElement);
       }
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("resize", handleResize);
       
       scene.remove(particles);
       scene.remove(smallParticles);
@@ -265,7 +277,7 @@ export default function ThreeBackground() {
       smallParticlesMaterial.dispose();
       renderer.dispose();
     };
-  }, [mounted]);
+  }, [mounted, resolvedTheme]); // Add resolvedTheme to dependencies
 
   // Update colors when theme changes
   useEffect(() => {

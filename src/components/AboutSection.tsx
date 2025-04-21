@@ -44,11 +44,11 @@ export default function AboutSection() {
     story: (
       <>
         <p className="text-lg leading-relaxed mb-6 text-justify">
-          I'm a passionate full-stack developer who loves crafting beautiful, functional, and user-centered digital experiences. My journey in web development began with a fascination for how design and technology intersect to create compelling user interfaces.
+          I&apos;m a passionate full-stack developer who loves crafting beautiful, functional, and user-centered digital experiences. My journey in web development began with a fascination for how design and technology intersect to create compelling user interfaces.
         </p>
         
         <p className="text-lg leading-relaxed mb-6 text-justify">
-          Throughout my career, I've collaborated with talented teams to deliver projects for my clients, from startups to established enterprises. My approach combines creative problem-solving with technical expertise to build solutions that not only meet but exceed client expectations.
+          Throughout my career, I&apos;ve collaborated with talented teams to deliver projects for my clients, from startups to established enterprises. My approach combines creative problem-solving with technical expertise to build solutions that not only meet but exceed client expectations.
         </p>
         
         <p className="text-lg leading-relaxed text-justify">
@@ -76,10 +76,10 @@ export default function AboutSection() {
           My development philosophy centers on three key principles: attention to detail, user-centered design, and performance optimization. I believe that the best digital experiences are those that seamlessly blend visual appeal with technical excellence.
         </p>
         <p className="text-lg leading-relaxed mb-6 text-justify">
-          For every project, I start by gaining a deep understanding of the user's needs and business objectives. This foundation guides the entire development process, ensuring that every decision contributes to creating a product that not only looks beautiful but also functions flawlessly.
+          For every project, I start by gaining a deep understanding of the user&apos;s needs and business objectives. This foundation guides the entire development process, ensuring that every decision contributes to creating a product that not only looks beautiful but also functions flawlessly.
         </p>
         <p className="text-lg leading-relaxed text-justify">
-          I'm particularly passionate about creating responsive, accessible, and performant websites that provide exceptional experiences across all devices and for all users, regardless of their abilities.
+          I&apos;m particularly passionate about creating responsive, accessible, and performant websites that provide exceptional experiences across all devices and for all users, regardless of their abilities.
         </p>
       </>
     ),
@@ -95,7 +95,7 @@ export default function AboutSection() {
           <span className="font-medium text-accent">Quality:</span> I maintain high standards in every aspect of my work, from clean code to polished interfaces.
         </p>
         <p className="text-lg leading-relaxed text-justify">
-          <span className="font-medium text-accent">Continuous Learning:</span> I'm dedicated to growing professionally, constantly expanding my skills and knowledge base.
+          <span className="font-medium text-accent">Continuous Learning:</span> I&apos;m dedicated to growing professionally, constantly expanding my skills and knowledge base.
         </p>
       </>
     ),
