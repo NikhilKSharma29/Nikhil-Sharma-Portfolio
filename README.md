@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Portfolio Website
+
+A dark-themed, interactive, and responsive personal portfolio website inspired by Rasul Akhundov's design philosophy. This site showcases a modern web development approach with smooth animations, 3D graphics, and immersive user experience.
+
+## Features
+
+- **Responsive Design:** Fully responsive across all device sizes
+- **Dark Theme:** Sleek dark design with high contrast elements
+- **Smooth Scrolling:** Implemented with Lenis for buttery-smooth scroll experience
+- **Animated UI:** GSAP-powered animations triggered on scroll and user interaction
+- **3D Graphics:** Three.js integration for interactive background elements
+- **Custom Cursor:** Unique cursor that responds dynamically to user interactions
+- **Parallax Effects:** Creating depth through varying element movement speeds
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:**
+  - GSAP (GreenSock Animation Platform)
+  - Framer Motion
+- **3D Graphics:** Three.js
+- **Smooth Scrolling:** Lenis
+  
+## Sections
+
+1. **Hero:** Dynamic introduction with animated text and interactive background
+2. **About:** Personal overview with scrolling animations
+3. **Skills:** Visual representation of technical proficiencies
+4. **Projects:** Filterable gallery of selected works
+5. **Experience:** Timeline of professional journey
+6. **Core Stack:** Showcase of primary technologies
+7. **Contact:** Form and personal contact information
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ and npm/yarn
+
+### Installation
+
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+```
+
+2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Run the development server
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Changing Personal Information
 
-## Learn More
+- Edit text content in each component file to reflect your personal information
+- Update project showcase in `src/components/ProjectsSection.tsx`
+- Modify skills in `src/components/SkillsSection.tsx`
+- Change experience details in `src/components/ExperienceSection.tsx`
 
-To learn more about Next.js, take a look at the following resources:
+### Styling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Core design values are set in `src/app/globals.css`
+- Color scheme can be modified in the CSS variables
+- Tailwind theme extends these variables in `tailwind.config.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This project is optimized for deployment on Vercel:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+# or
+yarn build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Credits
+
+- Design inspiration: [Rasul Akhundov](https://rasulakhundov.com/)
+- 3D graphics and animations: Three.js and GSAP
+- Smooth scrolling: Lenis
+
+## License
+
+MIT
